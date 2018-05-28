@@ -9,15 +9,15 @@ import os
 import time
 
 
-#set up driver, the r is rob which has to be done
-chrome_path = r"C:\Users\harry\Python\chromedriver_win32\chromedriver.exe"
+#set up driver, make chrome_path equal to location of your chromedriver.exe
+chrome_path = r"C:\Users\*YOUR*\Python\chromedriver_win32\chromedriver.exe"
 options = webdriver.ChromeOptions()
 driver = webdriver.Chrome(chrome_path)
-#get site
+#the site which has the long scrolling page
 driver.get("https://")
 
-#if there is a think you need to click first eg link
-elm = driver.find_element_by_link_text('Load more')
+#if a button is blocking it from being done automatically, find its name and put it in **here**. For example instagram uses "Load more".
+elm = driver.find_element_by_link_text('**here**')
 driver.implicitly_wait(5)
 elm.click()
 
